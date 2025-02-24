@@ -88,3 +88,10 @@ while(i<10 && valorEncontrado==false){
     }
     i++;
 }
+//Do While se ejecuta un bloque de código y después se comprueba que se cumpla la condición
+//como mínimo se ejecuta una vez
+i=0;
+do{
+    console.log("Recorremos el bucle for ->",inicializacion);
+    i++;
+}while(i<10);
