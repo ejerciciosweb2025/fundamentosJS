@@ -1,4 +1,4 @@
-//Condicional : tomar decisiones
+//Condicionales : tomar decisiones
 let llueve = true;
 //Si A es igual a verdadero haz eso
 if(llueve == true ){
@@ -53,4 +53,38 @@ switch(camiseta){
         break;
     default:
         console.log("Debe ser la camiseta que queda");        
+}
+
+//Condicional ternario
+let edad = 18;
+
+let esMayorEdad = (edad>=18)? "Es mayor de edad":"Es menor de edad";
+console.log(esMayorEdad);
+
+//Bucles
+//For se ejecuta un bloque de código mientras se cumpla la condición
+//conocemos el valor inicial
+
+for(let inicializacion=0; inicializacion<10;inicializacion++){
+    console.log("Recorremos el bucle for ->",inicializacion);
+}
+
+//While se ejecuta un bloque de código mientras se cumpla la condición
+//
+i=0;
+while(i<10){
+    console.log("Recorremos el bucle for ->",inicializacion);
+    i++;
+}
+//El bucle while suele tener instrucciones para finalizar el bucle y salir
+i=0;
+valorEncontrado=false;
+queremossalir = "N";
+while(i<10 && valorEncontrado==false){
+    console.log("Recorremos el bucle for ->",inicializacion);
+    queremossalir = prompt("S/N");
+    if(queremossalir=="S"){
+        valorEncontrado=true;
+    }
+    i++;
 }
