@@ -97,7 +97,33 @@ saludo();
 let segundos=0;
 /*Se usa dentro de otras funciones que se pasan como parámetro para ejecutar en las otras funciones (la otra función es quién las ejecuta), un ejemplo sin más. Se usa para ciertas funciones específicas.*/
 
+//Descomenta para ver la magia
+/*
 setInterval( function() {
     segundos++;
     console.log("Se ha ejecutado el timeout",segundos);
 },1000);
+*/
+
+//Ámbito o scope las variables locales existen dentro de su función con let
+//variables globales desde cualquier parte del programa
+
+//hoisting - javascript da 2 pasadas y puede reconocer 
+// la variable si la detecta en un bloque posterior. La declara pero no la inicializa queda como undefined
+console.log(pirulaJS);
+var pirulaJS = "Pues mira que bien que he detectado mi variable";
+//con let no deja ;-) , let mola, ¿que pasaría si tengo pirulaJS 
+// definida en algún punto del programa?
+
+//Funciones de Flecha
+//Otra forma de abreviar se parece a las funciones anónimas
+// No se puede usar this dentro de ella
+
+let restar = () => {
+    n1 = 7;
+    n2 = 5;
+
+    console.log(`El resultado de la resta es: ${n1} - ${n2} = ${n1-n2}`);
+};
+
+restar();
