@@ -112,3 +112,27 @@ for (elemento of articulosSelectorAll){
     console.log(elemento);
     elemento.classList.add("pintaDiferente");
 }
+
+//Modificar Toquetear
+const toquetea = document.querySelector("#toquetear");
+console.log(toquetea);
+toquetea.textContent="Contenido toquetear";
+toquetea.innerHTML="<strong>Contenido toquetear</strong>";
+toquetea.setAttribute("class","hola");
+console.log(toquetea.getAttribute("class"));
+console.log(toquetea.getAttribute("id"));
+toquetea.style.background="orange";
+
+toquetea.classList.add("pinta");
+toquetea.classList.add("eliminar");
+toquetea.classList.remove("eliminar");
+//toggle sino esta la añade, si esta la quita
+toquetea.classList.toggle("claseInventadaToogle");
+toquetea.classList.toggle("claseInventadaToogle");
+
+const mitexto = document.createElement("p");
+mitexto.textContent = "Contenido añadido pero no está enlazado";
+toquetea.append(mitexto);
+//o bien
+//toquetea.insertBefore(mitexto,toquetea.firstChild);
+toquetea.querySelector("strong").remove();
