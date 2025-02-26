@@ -102,3 +102,59 @@ console.log(indice);
 //busqueda para saber si existe 
 let existe = miArrayP.includes("Elemento añadido");
 console.log(existe);
+
+miArrayP.push("p3");
+miArrayP.push("p2");
+miArrayP.push("p1");
+
+//ordenar
+miArrayOrdenado = miArrayP.sort();
+console.log(miArrayOrdenado);
+
+//invertir orden
+miArrayDesOrdenado = miArrayP.reverse();
+console.log(miArrayDesOrdenado);
+
+//unir arrays como cadena
+let cadenaJoin = miArrayOrdenado.join(",");
+console.log(cadenaJoin);
+
+
+//parte de un array
+let parteArray = miArrayOrdenado.slice(0,2);
+console.log(parteArray);
+
+//Convertir string  a Array
+let cadena ="Mi Array";
+let cadenaAarray = Array.from(cadena);
+console.log(cadenaAarray);
+
+//Desestructuración
+let [uno,dos,tres] = [1,2,3];
+console.log(tres);
+
+let [peliculas,...restoPeliculas] = ["La mascara", "Terminator","Billy Elliot"];
+console.log(peliculas);
+console.log(restoPeliculas);
+
+//Expandir arrays
+
+let array1 = [1,2,3];
+let array2 = [4,5,6];
+
+let arrayExpandido = [...array1, ...array2];
+console.log(arrayExpandido);
+
+//Convertir a String
+console.log(arrayExpandido.toString());
+
+//Convertir Cadena a Array
+let cadenaP = arrayExpandido.toString();
+
+cadenaP = cadenaP.split(",");
+console.log(cadenaP);
+
+//Unir Array a cadena
+cadenaP = cadenaP.join(",");
+console.log(cadenaP);
+
