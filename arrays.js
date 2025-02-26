@@ -59,17 +59,17 @@ matriz[0][1]="Fiesta";
 console.log(matriz);
 console.log(matriz[0][1]);
 
-let fila=matriz[0].length;
+let fila=matriz.length;
 console.log(fila);
-let col=matriz[1].length;
+let col=matriz[0].length;
 console.log(col);
 
 //Recorrer matriz
-/*for(let i=0;i<fila;i++){
+for(let i=0;i<fila;i++){
     for(let j=0;j<col;j++){
         console.log(matriz[i][j]);
     }
-}*/
+}
 
 //funciones y métodos con JS
 //Añadir un elemento nuevo al array al final
