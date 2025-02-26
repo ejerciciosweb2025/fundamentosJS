@@ -25,6 +25,13 @@ console.log(minusculas);
 let letraBuscada = cadena.charAt(1);
 console.log(letraBuscada);
 
+
+//Nuestra cadena comienza por
+console.log(cadena.startsWith("En"));
+
+//Nuestra cadena acaba por
+console.log(cadena.endsWith("antigua"));
+
 //Comprobar si una cadena existe dentro de otra
 if( cadena.includes("En") ){
     cadenaEncontrada = true;
@@ -37,6 +44,18 @@ if(cadenaEncontrada){
     console.log("Cadena encontrada");
 }
 
+
+//Buscar texto dentro de una cadena y nos dice su posición
+let busca = cadena.search("En");
+console.log(busca);
+
+//Buscar texto dentro de una cadena y nos dice su posición. IDEM pero nos devuelve un array 
+let buscaMatch = cadena.match("En");
+console.log(buscaMatch);
+
+//Repetir palabras
+let repitesPalabras = cadena.repeat(5);
+
 //Buscar la posición de una palabra ( 1a aparición)
 let comienzoPalabraBuscada = cadena.indexOf("En");
 console.log(comienzoPalabraBuscada);
@@ -44,9 +63,15 @@ console.log(comienzoPalabraBuscada);
 //compruebo la letra inicio 
 console.log(cadena.charAt(comienzoPalabraBuscada));
 
+console.log("EXTRAYENDO con slice");
 //Extraer parte de un texto
 let extraigoParteTexto=cadena.slice(0,2);
 console.log(extraigoParteTexto);
+console.log("EXTRAYENDO con substring");
+
+//Extraer parte del texto como subcadena
+let misubString = cadena.substring(0,2);
+console.log(misubString);
 
 //Reemplazar una parte de un texto
 let reemplazarParteTexto = cadena.replace("En","hola");
@@ -57,3 +82,22 @@ console.log(cadena);
 let reemplazarTodaParteTexto = cadena.replaceAll("de","hola");
 console.log(reemplazarTodaParteTexto);
 console.log(cadena);
+
+//Eliminar espacios en blanco al inicio y final de la palabra
+let espacios = "     ESPACIOS        ";
+console.log(espacios);
+
+let eliminaEspacios = espacios.trim();
+console.log(eliminaEspacios);
+
+//Separar palabra por cadenas (una cadena es una lista de letras)
+let texto="cadena a separar";
+let textoSeparado = texto.split(" ");
+console.log(textoSeparado);
+
+//Concatenar cadenas de texto
+let texto1 = "Hola1 ";
+let texto2 = "texto concatenado";
+let textoConcatenado = texto1.concat(texto2);
+console.log(textoConcatenado);
+
