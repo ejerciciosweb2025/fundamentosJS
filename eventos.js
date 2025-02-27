@@ -111,3 +111,37 @@ textfocus.addEventListener("focus",()=>{
 textfocus.addEventListener("blur",()=>{
     console.log("Estas fuera del campo - actúa solo cuando sales");
 });
+
+//ventanas documentos
+document.addEventListener("DOMContentLoaded", ()=>{
+    console.log("Una alternativa para cargar el documento cuando este cargado");
+    console.info("Esta cargado el DOM de JS");
+});
+
+window.addEventListener("load",()=>{
+    console.info("Que ha cargado toda la ventana");
+    console.error("Todos los recursos - img, videos tb");
+});
+
+window.addEventListener("resize",()=>{
+    console.log("ventana redimensionada",window.innerWidth, window.innerHeight);
+});
+
+window.addEventListener("scroll",()=>{
+    console.log("Scroll/Pixel:",window.scrollX,window.scrollY);
+});
+
+//Portapapeles
+let portapapeles = document.querySelector("#portapapeles");
+portapapeles.addEventListener("copy",()=>{
+    console.log("No copies");
+});
+portapapeles.addEventListener("paste",()=>{
+    console.log("No pegues");
+});
+portapapeles.addEventListener("cut",()=>{
+    console.log("No cortes");
+});
+portapapeles.addEventListener("contextmenu",()=>{
+    console.log("Menu contextual");
+});
