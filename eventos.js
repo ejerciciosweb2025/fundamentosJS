@@ -10,7 +10,104 @@
  * con el ratón. Cuando nosotros pinchemos ocurrirá lo que 
  * hemos definido dentro de esa acción.
  * 
- * Los eventos serian como un conjunto de instrucciones
+ * Los eventos serian como un conjunto de instrucciones (función)
  * que están esperando a ejecutarse cuando reciba el mensaje
  * correspondiente a esa acción definida 
  */
+//https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/Events
+//https://developer.mozilla.org/es/docs/Web/Events
+
+let botonPulsado = document.querySelector("#pulsar");
+console.log(botonPulsado);
+function pulsar(){
+    console.log("Has pinchado en el boton pulsar");
+}
+botonPulsado.addEventListener("click", pulsar);
+botonPulsado.addEventListener("click", function(){
+    console.log("Has pinchado en el boton pulsar");
+});
+botonPulsado.addEventListener("click", ()=>{
+    console.log("Has pinchado en el boton pulsar");
+});
+
+//Si pasamos el parámetro event,e nos mostrará la información del evento 
+// ya que la da por defecto pero no la muestra
+//Eventos de ratón
+//Click
+botonPulsado.addEventListener("click", (evento)=>{
+    console.log(evento);
+    console.log(evento.clientX);
+});
+//DobleClick
+const botonDobleClick = document.querySelector("#pulsar2");
+
+botonDobleClick.addEventListener("dblclick",()=>{
+    console.log("Has dado 2 clicks");
+});
+
+let inputTexto = document.querySelector("#cajaTexto");
+inputTexto.addEventListener("mouseover",()=>{
+    console.info("Has pasado por encima del campo de texto");
+});
+inputTexto.addEventListener("mouseout",()=>{
+    console.warn("Has salido del campo de texto");
+});
+inputTexto.addEventListener("mousemove",()=>{
+    console.error("Dentro del campo de texto");
+});
+
+//Eventos de teclado
+const tecleaTexto = document.querySelector("#tecleaTexto");
+tecleaTexto.addEventListener("keydown",(evento)=>{
+    console.info("Pero que hacess loc@, has presionado la tecla: "+evento.key);
+});
+tecleaTexto.addEventListener("keyup",(evento)=>{
+    console.error("Has soltado una tecla,;-): "+evento.key);
+});
+tecleaTexto.addEventListener("keypress",(evento)=>{
+    console.warn("Mantienes pulsada una tecla,;-): "+evento.key);
+});
+
+//Eventos de formulario
+let miformulario = document.querySelector("#miformulario");
+
+miformulario.addEventListener("submit",(evento)=>{
+    evento.preventDefault(); //Para que no me recargue la página
+    let usuario = document.querySelector("#usuario").value;
+    console.log(usuario);
+
+    let email   = document.querySelector("#email").value;
+    console.log(email);
+
+    let opcion = document.querySelector("#opcion").value;
+    console.log(opcion);
+
+    console.error("Tranquilidad, no me guardo los datos");
+});
+
+let btnEspia = document.querySelector("#btnEspia");
+
+btnEspia.addEventListener("input", ()=>{
+    console.warn("El usuario ha escrito ...que no se entere:\n " +btnEspia.value);
+});
+
+//otra forma de escribirlo
+/*
+btnEspia.addEventListener("input", function(){
+    console.warn("El usuario ha escrito ...que no se entere:\n " +this.value);
+});*/
+
+let opcion2 = document.querySelector("#opcion2");
+console.log(opcion2);
+opcion2.addEventListener("change", ()=>{
+    console.log("Has cambiado el select a: ",opcion2.value);
+});
+
+//blur
+let textfocus = document.querySelector("#textfocus");
+textfocus.addEventListener("focus",()=>{
+    console.log("Estas dentro del campo - actúa solo cuando entras");
+});
+textfocus.addEventListener("blur",()=>{
+    console.log("Estas fuera del campo - actúa solo cuando sales");
+});

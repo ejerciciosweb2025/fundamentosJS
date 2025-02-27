@@ -5,31 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="micss.css">
-    <script defer src="dom.js"></script>
+    <script defer src="eventos.js"></script>
 </head>
 <body>
-    <h1>JS</h1>
-    <div id="caja">
-        <h2>Un título</h2>
-    </div>
+    <h1>Eventos JS</h1> 
 
-    <section id="articulos">
-        <article class="articulo">
-            <h3>Título del artículo</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius suscipit distinctio. Minus, quas corrupti in quod nesciunt reprehenderit, eum rerum tempora officia alias temporibus cum quam sunt esse similique.</p>
-        </article>
-        <article class="articulo">
-            <h3>Título del artículo</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius suscipit distinctio. Minus, quas corrupti in quod nesciunt reprehenderit, eum rerum tempora officia alias temporibus cum quam sunt esse similique.</p>
-        </article>
-        <article class="articulo">
-            <h3>Título del artículo</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eius suscipit distinctio. Minus, quas corrupti in quod nesciunt reprehenderit, eum rerum tempora officia alias temporibus cum quam sunt esse similique.</p>
-        </article>
-    </section>
+    <button id="pulsar">Hacer click!</button>
+    <button id="pulsar2">Doble click!</button>
+    <input type="text" name="cajaTexto" id="cajaTexto" placeholder="Pasa por encima para que cuente">
+    <input type="text" name="tecleaTexto" id="tecleaTexto" placeholder="Teclea">
+    <br>
 
-   <div id="toquetear">
-        Modificar
-   </div> 
+    <form action="#" method="post"id="miformulario">
+        <fieldset>
+            <label for="usuario">Usuario</label>
+            <p><input type="text" name="usuario" id="usuario"></p>
+            <label for="email">Email</label>
+            <p><input type="email" name="email" id="email">
+            <p><select name="opcion" id="opcion">
+                <option value="si" selected>Sí</option>
+                <option value="no">No</option>
+            </select></p>
+        
+        <p><input type="submit" value="Enviar"></p>
+        </fieldset>
+    </form>
+    <p><input type="password" name="btnEspia" id="btnEspia" placeholder="btnEspia"></p>
+    <p><select name="opcion2" id="opcion2">
+        <option value="si" selected>Sí</option>
+        <option value="no">No</option>
+    </select></p>
+    <p><input type="text" name="textfocus" id="textfocus" placeholder="textfocus"></p>
 </body>
 </html>
