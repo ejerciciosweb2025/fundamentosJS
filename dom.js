@@ -136,3 +136,4 @@ toquetea.append(mitexto);
 //o bien
 //toquetea.insertBefore(mitexto,toquetea.firstChild);
 toquetea.querySelector("strong").remove();
+
