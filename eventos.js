@@ -135,6 +135,7 @@ window.addEventListener("scroll",()=>{
 let portapapeles = document.querySelector("#portapapeles");
 portapapeles.addEventListener("copy",()=>{
     console.log("No copies");
+    //navigator.clipboard.writeText("");
 });
 portapapeles.addEventListener("paste",()=>{
     console.log("No pegues");
