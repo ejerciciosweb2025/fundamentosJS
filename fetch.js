@@ -1,6 +1,8 @@
 //Hacer peticiones a un servicio externo 
 // y esperamos a que nos de una respuesta
 // y usar el resultado que nos devuelve en nuestra aplicación
+//Una promesa Es un objeto que espera recibir algo en el futuro
+
 //https://reqres.in/
 //https://reqres.in/api/users/2
 //https://reqres.in/api/users/
@@ -46,6 +48,7 @@ const MAX = 12;
 let usuarioAleatorio = Math.ceil(Math.random()*MAX);
 url = "https://reqres.in/api/users/";
 url = url + usuarioAleatorio;
+
 //convencion
 //enviada una url espero una respuesta
 fetch(url)
