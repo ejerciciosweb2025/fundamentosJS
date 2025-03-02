@@ -198,3 +198,4 @@ console.log(miPerroLazarillo.mostrarPerroLazarillo());
 miPerroLazarillo.setDirigir(false);
 miPerroLazarillo.getDirigir();
 console.log(miPerroLazarillo.mostrarPerroLazarillo());
+miPerroLazarillo.correr();
