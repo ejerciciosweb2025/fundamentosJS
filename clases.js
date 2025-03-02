@@ -170,6 +170,31 @@ Perro4.nocopiar();
 Perro4.nocopiar();
 Perro4.nocopiar();
 Perro4.nocopiar();
-
 console.log("No tengo mi ejemplar de perro llamo a la clase directamente");
 console.log(Perro4);
+
+class PerroLazarillo extends Perro2{
+    constructor(nombre,raza,color,posicion,dirigir){
+        super(nombre,raza,color,posicion);
+        this.dirigir = dirigir;
+    }
+
+    setDirigir( dirigir){
+        this.dirigir=dirigir;
+    }
+    getDirigir(){
+        return this.dirigir;
+    }
+
+    mostrarPerroLazarillo(){
+        return(`Mi perro ${this.nombre} tiene la raza ${this.raza} y tiene la capacidad de dirigir a personas - ${this.dirigir}`);
+    }
+}
+
+let miPerroLazarillo = new PerroLazarillo("Chopete","Dálmata","Gris y Negro",7,true);
+console.log(miPerroLazarillo);
+console.log(miPerroLazarillo.mostrarPerroLazarillo());
+
+miPerroLazarillo.setDirigir(false);
+miPerroLazarillo.getDirigir();
+console.log(miPerroLazarillo.mostrarPerroLazarillo());
