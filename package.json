@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "js.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll",
+    "coverage":"jest --coverage"
   },
   "repository": {
     "type": "git",
