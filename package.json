@@ -1,0 +1,23 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "main": "js.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejerciciosweb2025/fundamentosJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ejerciciosweb2025/fundamentosJS/issues"
+  },
+  "homepage": "https://github.com/ejerciciosweb2025/fundamentosJS#readme",
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
